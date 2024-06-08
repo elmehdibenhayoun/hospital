@@ -1,0 +1,44 @@
+<odoo>
+    <record id="view_hospital_operation_form" model="ir.ui.view">
+        <field name="name">hospital.operation.form</field>
+        <field name="model">hospital.operation</field>
+        <field name="arch" type="xml">
+            <form string="Operation">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="date"/>
+                        <field name="patient_id"/>
+                        <field name="doctor_id"/>
+                        <field name="room_id"/>
+                        <field name="price"/>
+                    </group>
+                    <notebook>
+                        <page string="Equipments">
+                            <field name="equipment_ids">
+                                <tree>
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hospital_operation_tree" model="ir.ui.view">
+        <field name="name">hospital.operation.tree</field>
+        <field name="model">hospital.operation</field>
+        <field name="arch" type="xml">
+            <tree string="Operations">
+                <field name="name"/>
+                <field name="date"/>
+                <field name="patient_id"/>
+                <field name="doctor_id"/>
+                <field name="room_id"/>
+                <field name="price"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

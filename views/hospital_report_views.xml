@@ -1,0 +1,70 @@
+<odoo>
+    <!-- Form view -->
+    <record id="view_hospital_report_form" model="ir.ui.view">
+        <field name="name">hospital.report.form</field>
+        <field name="model">hospital.report</field>
+        <field name="arch" type="xml">
+            <form string="Hospital Report">
+                <sheet>
+                    <group>
+                        <field name="total_patients"/>
+                        <field name="total_doctors"/>
+                        <field name="total_appointments"/>
+                        <field name="total_rooms"/>
+                        <field name="total_operations"/>
+
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Kanban view for dashboard -->
+    <record id="view_hospital_report_kanban" model="ir.ui.view">
+        <field name="name">hospital.report.kanban</field>
+        <field name="model">hospital.report</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="name">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="o_kanban_record">
+                            <div class="o_kanban_details">
+                                <strong>Statistics</strong>
+                                <div>Total Patients: <field name="total_patients"/></div>
+                                <div>Total Doctors: <field name="total_doctors"/></div>
+                                <div>Total Appointments: <field name="total_appointments"/></div>
+                                <div>Total Rooms: <field name="total_rooms"/></div>
+                                <div>Total Operations: <field name="total_operations"/></div>
+
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Graph view for dashboard -->
+    <record id="view_hospital_report_graph" model="ir.ui.view">
+        <field name="name">hospital.report.graph</field>
+        <field name="model">hospital.report</field>
+        <field name="arch" type="xml">
+            <graph string="Hospital Report Graph">
+                <field name="total_patients" type="measure"/>
+                <field name="total_doctors" type="measure"/>
+                <field name="total_appointments" type="measure"/>
+                <field name="total_rooms" type="measure"/>
+                <field name="total_operations" type="measure"/>
+
+            </graph>
+        </field>
+    </record>
+
+    <!-- Action to open the dashboard -->
+    <record id="action_hospital_report" model="ir.actions.act_window">
+        <field name="name">Hospital Report</field>
+        <field name="res_model">hospital.report</field>
+        <field name="view_mode">kanban,graph,form</field>
+    </record>
+</odoo>

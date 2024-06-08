@@ -1,0 +1,78 @@
+<odoo>
+    <!-- Patient menu and action -->
+    <record id="action_hospital_patient" model="ir.actions.act_window">
+        <field name="name">Patients</field>
+        <field name="res_model">hospital.patient</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Doctor menu and action -->
+    <record id="action_hospital_doctor" model="ir.actions.act_window">
+        <field name="name">Doctors</field>
+        <field name="res_model">hospital.doctor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Appointment menu and action -->
+    <record id="action_hospital_appointment" model="ir.actions.act_window">
+        <field name="name">Appointments</field>
+        <field name="res_model">hospital.appointment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Departement menu and action -->
+    <record id="action_hospital_departement" model="ir.actions.act_window">
+        <field name="name">Departements</field>
+        <field name="res_model">hospital.departement</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Room menu and action -->
+    <record id="action_hospital_room" model="ir.actions.act_window">
+        <field name="name">Rooms</field>
+        <field name="res_model">hospital.room</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Equipement menu and action -->
+    <record id="action_hospital_equipement" model="ir.actions.act_window">
+        <field name="name">Equipments</field>
+        <field name="res_model">hospital.equipement</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Operation menu and action -->
+    <record id="action_hospital_operation" model="ir.actions.act_window">
+        <field name="name">Operations</field>
+        <field name="res_model">hospital.operation</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Facture menu and action -->
+    <record id="action_hospital_facture" model="ir.actions.act_window">
+        <field name="name">Invoices</field>
+        <field name="res_model">hospital.facture</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Report menu and action -->
+    <record id="action_hospital_report" model="ir.actions.act_window">
+        <field name="name">Reports</field>
+        <field name="res_model">hospital.report</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Main menu -->
+    <menuitem id="menu_hospital_management" name="Hospital Management" sequence="1"/>
+
+    <!-- Submenus -->
+    <menuitem id="menu_hospital_patient" name="Patients" parent="menu_hospital_management" action="action_hospital_patient"/>
+    <menuitem id="menu_hospital_doctor" name="Doctors" parent="menu_hospital_management" action="action_hospital_doctor"/>
+    <menuitem id="menu_hospital_appointment" name="Appointments" parent="menu_hospital_management" action="action_hospital_appointment"/>
+    <menuitem id="menu_hospital_departement" name="Departements" parent="menu_hospital_management" action="action_hospital_departement"/>
+    <menuitem id="menu_hospital_room" name="Rooms" parent="menu_hospital_management" action="action_hospital_room"/>
+    <menuitem id="menu_hospital_equipement" name="Equipments" parent="menu_hospital_management" action="action_hospital_equipement"/>
+    <menuitem id="menu_hospital_operation" name="Operations" parent="menu_hospital_management" action="action_hospital_operation"/>
+    <menuitem id="menu_hospital_facture" name="Invoices" parent="menu_hospital_management" action="action_hospital_facture"/>
+    <menuitem id="menu_hospital_report" name="Reports" parent="menu_hospital_management" action="action_hospital_report"/>
+</odoo>

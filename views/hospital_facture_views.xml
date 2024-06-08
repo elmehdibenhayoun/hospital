@@ -1,0 +1,31 @@
+<odoo>
+    <record id="view_hospital_facture_form" model="ir.ui.view">
+        <field name="name">hospital.facture.form</field>
+        <field name="model">hospital.facture</field>
+        <field name="arch" type="xml">
+            <form string="Invoice">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="date"/>
+                        <field name="patient_id"/>
+                        <field name="amount" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hospital_facture_tree" model="ir.ui.view">
+        <field name="name">hospital.facture.tree</field>
+        <field name="model">hospital.facture</field>
+        <field name="arch" type="xml">
+            <tree string="Invoices">
+                <field name="name"/>
+                <field name="date"/>
+                <field name="patient_id"/>
+                <field name="amount"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
